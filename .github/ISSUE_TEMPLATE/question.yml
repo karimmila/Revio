@@ -1,0 +1,18 @@
+name: Question
+description: Ask how something works, or report something that is not a bug or a feature request
+title: '[Question]: '
+labels:
+  - question
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The [README](https://github.com/karimmila/Revio#readme) answers the common questions about install, updates and cloud workspaces. Please read its FAQ first.
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Your question
+      description: Tell us what you are trying to do and what you tried.
+    validations:
+      required: true

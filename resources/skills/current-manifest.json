@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 3,
+  "skills": [
+    {
+      "name": "revio-cli",
+      "sourcePath": "skills/revio-cli",
+      "packageDigest": "5574b431451a5e2b135488ed5d154736e1960aebc2cefd62c764addac47fdd4a",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "size": 2405,
+          "executable": false,
+          "classification": "text",
+          "exactSha256": "d9f8d597730c22220030deec7fa5cb415edf7be1579486e9afb5961f5e8f80b9",
+          "textNormalizedSha256": "d9f8d597730c22220030deec7fa5cb415edf7be1579486e9afb5961f5e8f80b9",
+          "identitySha256": "d9f8d597730c22220030deec7fa5cb415edf7be1579486e9afb5961f5e8f80b9"
+        }
+      ]
+    },
+    {
+      "name": "revio-computer-use",
+      "sourcePath": "skills/revio-computer-use",
+      "packageDigest": "fa18e8b0de3bf5d559a01020b5cd855e9cfcc19ac70602c930ba2368c07fb59c",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "size": 2314,
+          "executable": false,
+          "classification": "text",
+          "exactSha256": "623570300bc6421c68d54febf30d22293b0c3952a2bc5dafdfa101c69177f866",
+          "textNormalizedSha256": "623570300bc6421c68d54febf30d22293b0c3952a2bc5dafdfa101c69177f866",
+          "identitySha256": "623570300bc6421c68d54febf30d22293b0c3952a2bc5dafdfa101c69177f866"
+        }
+      ]
+    },
+    {
+      "name": "revio-emulator",
+      "sourcePath": "skills/revio-emulator",
+      "packageDigest": "06c5329f6a8eb486b01746bcaf84a86ff9e239f70d176b2ab2430baf8bfea9c4",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "size": 2426,
+          "executable": false,
+          "classification": "text",
+          "exactSha256": "8a5852ee5da622340c168ee08a4f0e3f9e191618c2f473e664bec5a27df566de",
+          "textNormalizedSha256": "8a5852ee5da622340c168ee08a4f0e3f9e191618c2f473e664bec5a27df566de",
+          "identitySha256": "8a5852ee5da622340c168ee08a4f0e3f9e191618c2f473e664bec5a27df566de"
+        }
+      ]
+    },
+    {
+      "name": "revio-emulator-android",
+      "sourcePath": "skills/revio-emulator-android",
+      "packageDigest": "56f9a7a2f22d7f5c22412b108cde4892aade083d1c52a5ad1647056860ece07b",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "size": 2321,
+          "executable": false,
+          "classification": "text",
+          "exactSha256": "0c27e235c24e0d0e030a3d3b18f10cb363d2f3a05ec222761c304d6ab1ffd579",
+          "textNormalizedSha256": "0c27e235c24e0d0e030a3d3b18f10cb363d2f3a05ec222761c304d6ab1ffd579",
+          "identitySha256": "0c27e235c24e0d0e030a3d3b18f10cb363d2f3a05ec222761c304d6ab1ffd579"
+        }
+      ]
+    },
+    {
+      "name": "revio-jira",
+      "sourcePath": "skills/revio-jira",
+      "packageDigest": "87c68053336369b92a828ff199fef31e0ed27f40aad1ee1b7e3ddb728a2e48be",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "size": 2166,
+          "executable": false,
+          "classification": "text",
+          "exactSha256": "5177d4bdc46d24c80db627c1c87019ad0f1644a51f88a8a2b630e70c21379856",
+          "textNormalizedSha256": "5177d4bdc46d24c80db627c1c87019ad0f1644a51f88a8a2b630e70c21379856",
+          "identitySha256": "5177d4bdc46d24c80db627c1c87019ad0f1644a51f88a8a2b630e70c21379856"
+        }
+      ]
+    },
+    {
+      "name": "revio-jira-tickets",
+      "sourcePath": "skills/revio-jira-tickets",
+      "packageDigest": "42818d2270c579ee6fdaa74da9546c9a9b6470912be244c50b53a8b2982cdbc0",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "size": 2223,
+          "executable": false,
+          "classification": "text",
+          "exactSha256": "d8d93be995af34e45d4cb31615e86aeadf0f29473517d9da373546c0bcd0b2e9",
+          "textNormalizedSha256": "d8d93be995af34e45d4cb31615e86aeadf0f29473517d9da373546c0bcd0b2e9",
+          "identitySha256": "d8d93be995af34e45d4cb31615e86aeadf0f29473517d9da373546c0bcd0b2e9"
+        }
+      ]
+    },
+    {
+      "name": "revio-linear",
+      "sourcePath": "skills/revio-linear",
+      "packageDigest": "1dbda8f96f8019660f1ad90077aa78d4a2480266884c67b63202b93b761aaf8f",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "size": 2174,
+          "executable": false,
+          "classification": "text",
+          "exactSha256": "54bcd60301abbe7c9de77d8f74eb1d5f722d4c118dfaf4268779baff003f6205",
+          "textNormalizedSha256": "54bcd60301abbe7c9de77d8f74eb1d5f722d4c118dfaf4268779baff003f6205",
+          "identitySha256": "54bcd60301abbe7c9de77d8f74eb1d5f722d4c118dfaf4268779baff003f6205"
+        }
+      ]
+    },
+    {
+      "name": "revio-linear-tickets",
+      "sourcePath": "skills/revio-linear-tickets",
+      "packageDigest": "b828a2e20c2e73d2a6e265b0f73a1d452270f09598137178278ca09b954456c0",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "size": 2333,
+          "executable": false,
+          "classification": "text",
+          "exactSha256": "5fb83a7c8eb1749c35a4371f447ef468510f25cde0d1a677de90093ac9eab4d1",
+          "textNormalizedSha256": "5fb83a7c8eb1749c35a4371f447ef468510f25cde0d1a677de90093ac9eab4d1",
+          "identitySha256": "5fb83a7c8eb1749c35a4371f447ef468510f25cde0d1a677de90093ac9eab4d1"
+        }
+      ]
+    },
+    {
+      "name": "revio-orchestration",
+      "sourcePath": "skills/revio-orchestration",
+      "packageDigest": "1b71a8647ad045f2f4998976ac870398231b75ffb126b06ba33fee8f3a88d61c",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "size": 3386,
+          "executable": false,
+          "classification": "text",
+          "exactSha256": "6ddc9f2808da221606012121b9a1f8275d2c14d7b0f989ac7aa6cc7a9d414b4d",
+          "textNormalizedSha256": "6ddc9f2808da221606012121b9a1f8275d2c14d7b0f989ac7aa6cc7a9d414b4d",
+          "identitySha256": "6ddc9f2808da221606012121b9a1f8275d2c14d7b0f989ac7aa6cc7a9d414b4d"
+        }
+      ]
+    },
+    {
+      "name": "revio-per-workspace-env",
+      "sourcePath": "skills/revio-per-workspace-env",
+      "packageDigest": "e3057b58e33d9fb88e3e0c0f60814b32b89bc78bd98e06f66022dbbbe0cb8fc1",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "size": 2345,
+          "executable": false,
+          "classification": "text",
+          "exactSha256": "7a6e2bf710b0fc07afe0abb63d7830fb754217f58e848b51b8cfd2c00deda52b",
+          "textNormalizedSha256": "7a6e2bf710b0fc07afe0abb63d7830fb754217f58e848b51b8cfd2c00deda52b",
+          "identitySha256": "7a6e2bf710b0fc07afe0abb63d7830fb754217f58e848b51b8cfd2c00deda52b"
+        }
+      ]
+    },
+    {
+      "name": "revio-plugin-authoring",
+      "sourcePath": "skills/revio-plugin-authoring",
+      "packageDigest": "5f228fbf0d89ffd6beb4a07c3eac0578c785b6ce7220e6757a40c36b8c04b6b3",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "size": 2408,
+          "executable": false,
+          "classification": "text",
+          "exactSha256": "2a05b9419ef15bfef11c0316501fe67faada6c374613e2fbaf950271a3573242",
+          "textNormalizedSha256": "2a05b9419ef15bfef11c0316501fe67faada6c374613e2fbaf950271a3573242",
+          "identitySha256": "2a05b9419ef15bfef11c0316501fe67faada6c374613e2fbaf950271a3573242"
+        }
+      ]
+    }
+  ]
+}

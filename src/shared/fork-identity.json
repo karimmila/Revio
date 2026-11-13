@@ -1,0 +1,34 @@
+{
+  "productName": "Revio",
+  "appId": "dev.revio.app",
+  "userDataDirName": "revio",
+  "urlScheme": "revio",
+  "cliCommandName": "revio",
+  "basedOnNotice": "Based on Orca by Lovecast Inc., MIT License",
+  "copyrightNotice": "Copyright (c) 2026 Lovecast Inc. Released under the MIT License.",
+  "updateFeedGitHubRepo": null,
+  "sourceRepoUrl": "https://github.com/karimmila/Revio",
+  "releasesRepo": "karimmila/Revio",
+  "githubApp": {
+    "clientId": "Iv23li0RUtyIJzyyTUTs",
+    "slug": "revio-workspaces",
+    "host": "github.com"
+  },
+  "services": {
+    "feedbackUrl": null,
+    "issuesUrl": "https://github.com/karimmila/Revio/issues/new",
+    "cloudLoginUrl": null,
+    "relayBaseUrl": null,
+    "pushGatewayUrl": null,
+    "connectorUrl": null,
+    "shareBaseUrl": null,
+    "skillShareUrl": null,
+    "pluginCatalogUrl": null,
+    "communityPluginCatalogUrl": null,
+    "pluginDirectoryUrl": null,
+    "whatsNewUrl": null,
+    "docsBaseUrl": null,
+    "telemetryWriteKey": null,
+    "diagnosticsUploadUrl": null
+  }
+}

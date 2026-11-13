@@ -1,0 +1,69 @@
+import type { RuntimeFileOperationArgs } from '@/runtime/runtime-file-client-types'
+import type { TreeNode } from '../tree/file-explorer-types'
+
+export function shouldShowCollapseFolderAction(node: TreeNode, isExpanded: boolean): boolean {
+  return node.isDirectory && isExpanded
+}
+
+export function shouldShowFindInFolderAction(node: TreeNode): boolean {
+  return node.isDirectory
+}
+
+export function shouldShowOpenInTerminalAction(node: TreeNode): boolean {
+  return node.isDirectory
+}
+
+export function shouldShowViewFileAction(node: TreeNode): boolean {
+  return !node.isDirectory
+}
+
+export function shouldShowRemoteDownloadAction(
+  node: TreeNode,
+  connectionId?: string | null,
+  runtimeDownloadContext?: RuntimeFileOperationArgs | null,
+  // Require advertised SFTP recursive transfer; unknown and system-SSH folder downloads stay hidden.
+  supportsFolderDownload = false
+): boolean {
+  // Native save dialogs require desktop; runtime/system-SSH folders lack recursive transfer contracts.
+  const hasDownloadCapability = node.isDirectory
+    ? Boolean(connectionId && supportsFolderDownload)
+    : Boolean(connectionId || runtimeDownloadContext)
+  return (
+    hasDownloadCapability &&
+    (globalThis as { __ORCA_WEB_CLIENT__?: boolean }).__ORCA_WEB_CLIENT__ !== true
+  )
+}
+
+export function shouldShowCopyFileAction(
+  node: TreeNode,
+  connectionId?: string | null,
+  selectionSize = 1
+): boolean {
+  // Clipboard staging supports desktop paths and direct SSH, not paired runtimes.
+  if (node.operationOwner?.kind === 'runtime' || node.operationOwner?.kind === 'unresolved') {
+    return false
+  }
+  // Remote directories need recursive materialization; support only a single concrete file reference.
+  return (
+    (!connectionId || !node.isDirectory) &&
+    selectionSize === 1 &&
+    (globalThis as { __ORCA_WEB_CLIENT__?: boolean }).__ORCA_WEB_CLIENT__ !== true
+  )
+}
+
+/** "Copy" for a file on a cloud sandbox or paired server: main stages a copy on this Mac first. */
+export function shouldShowRuntimeCopyFileAction(
+  node: TreeNode,
+  runtimeDownloadContext?: RuntimeFileOperationArgs | null,
+  selectionSize = 1
+): boolean {
+  return (
+    node.operationOwner?.kind === 'runtime' &&
+    !node.isDirectory &&
+    selectionSize === 1 &&
+    Boolean(runtimeDownloadContext) &&
+    typeof window !== 'undefined' &&
+    typeof window.api?.ui?.startClipboardStagedFile === 'function' &&
+    (globalThis as { __ORCA_WEB_CLIENT__?: boolean }).__ORCA_WEB_CLIENT__ !== true
+  )
+}

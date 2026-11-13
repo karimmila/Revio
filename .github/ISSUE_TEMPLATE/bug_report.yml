@@ -1,0 +1,83 @@
+name: Bug report
+description: Report a problem with Revio
+title: '[Bug]: '
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Give enough detail for someone else to reproduce the problem.
+        For a security problem, do not open an issue. Follow the [security policy](https://github.com/karimmila/Revio/security/policy) instead.
+
+  - type: input
+    id: revio_version
+    attributes:
+      label: Revio version
+      description: Open the Revio menu and choose About Revio. If you built from source, give the commit.
+      placeholder: 0.1.0
+    validations:
+      required: true
+
+  - type: input
+    id: macos_version
+    attributes:
+      label: macOS version and Mac model
+      description: Open the Apple menu and choose About This Mac.
+      placeholder: macOS 15.5, MacBook Pro (M3)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: workspace_location
+    attributes:
+      label: Where does the workspace run?
+      options:
+        - On my Mac (local)
+        - In the cloud (Vercel Sandbox)
+        - Both
+        - Not related to a workspace
+    validations:
+      required: true
+
+  - type: input
+    id: agent
+    attributes:
+      label: Coding agent
+      description: The agent CLI and its version, if the problem involves an agent.
+      placeholder: Claude Code 2.1.0
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Create a workspace in ...
+        2. Click ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or screenshots
+      description: Remove tokens, keys and other private values before you paste.
+    validations:
+      required: false

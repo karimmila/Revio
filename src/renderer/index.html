@@ -1,0 +1,21 @@
+<!doctype html>
+<html class="native-shell">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="img-src 'self' data: blob: http: https: file: orca-media: orca-preview: orca-jira-image: orca-plugin-image:"
+    />
+    <title>Orca</title>
+    <!--
+      No script-src here, on purpose. The srcdoc frames this page mounts (chat visuals, plugin
+      panels) inherit its policy and run inline and CDN scripts, so a script policy strict enough
+      to matter breaks them. A Report-Only policy needs a response header, and file:// has none.
+    -->
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

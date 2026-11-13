@@ -1,0 +1,40 @@
+import type { AgentDashboardSurface } from './telemetry-agent-dashboard-event-schemas'
+
+export type ChatUiLaunchTipTargeting =
+  | { mode: 'all' }
+  | { mode: 'eligible-harnesses'; eligible: boolean }
+  | { mode: 'not-switched'; eligible: boolean }
+
+export type ChatUiLaunchTipCohort =
+  | 'control'
+  | 'treatment'
+  | 'treatment-live-switch'
+  | 'treatment-swapped-buttons'
+  | 'treatment-center'
+
+export type TelemetrySettings = {
+  /**
+   * New users: false at install, since nobody is opted in without being asked. Existing users:
+   * null until they resolve the first-launch banner. True only together with `optInConfirmed`.
+   */
+  optedIn: boolean | null
+  /**
+   * Set when the person turned telemetry on themselves (the Privacy switch or the banner). An
+   * opt-in without it was an earlier build's install-time default and is reset to off on load, so
+   * giving a build an analytics key never starts sending for someone who was not asked.
+   */
+  optInConfirmed?: true
+  /** Anonymous UUID v4. Generated on first run. Stable across launches; not surfaced in the UI. */
+  installId: string
+  /** Cohort marker: true for pre-existing profiles (gates the opt-in banner), false for fresh installs. */
+  existedBeforeTelemetryRelease: boolean
+  /** Frozen 50/50 assignment for fresh installs; absent for profiles predating the experiment. */
+  onboardingLanguageCohort?: 'control' | 'treatment'
+  /** Frozen 70% control / 30% corner-card assignment; legacy labels persist, with the delivered rollout version recorded on tip events. */
+  chatUiLaunchTipCohort?: ChatUiLaunchTipCohort
+  /** Treatment cards split equally by eligibility; frozen locally from settings, never usage history. */
+  chatUiLaunchTipButtonEmphasis?: 'normal' | 'swapped'
+  chatUiLaunchTipTargeting?: ChatUiLaunchTipTargeting
+  /** Local UTC-day cursors cap dashboard observations across restarts; at most two writes a day. */
+  agentDashboardActiveDays?: Partial<Record<AgentDashboardSurface, number>>
+}
